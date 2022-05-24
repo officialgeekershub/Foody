@@ -45,6 +45,7 @@ export default () => {
           <Stack.Screen
           name='MealDetail'
           component={MealDetailScreen}
+          
           />
 
         </Stack.Navigator>
