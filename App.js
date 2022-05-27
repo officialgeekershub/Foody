@@ -8,6 +8,7 @@ import MealDetailScreen from './screens/MealDetailScreen';
 import FavoritesScreen from './screens/FavoritesScreen';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/Ionicons';
+import FavoritesContextProvider from './store/context/favorites-context';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -50,6 +51,7 @@ const DrawerNavigator = () => {
 export default () => {
   return (
     <>
+    <FavoritesContextProvider>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
@@ -84,6 +86,7 @@ export default () => {
           />
         </Stack.Navigator>
       </NavigationContainer>
+      </FavoritesContextProvider>
     </>
   );
 };
